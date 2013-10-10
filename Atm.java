@@ -17,7 +17,7 @@ class Atm {
 		// run interaction
 		String user;
 		int pin;
-
+		int job;
 		while (running) {
 			greeting();
 			if (!loggedIn) {
@@ -38,6 +38,7 @@ class Atm {
 				System.out.println("Deposit         (2)");
 				System.out.println("Modify username (3)");
 				System.out.println("Modify pin      (4)");
+				job = reader.nextInt();
 			}
 		}
 	}
