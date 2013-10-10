@@ -32,7 +32,12 @@ class Atm {
 					reader.next();
 				}
 			}else{
-				System.out.println();
+				System.out.println("What would you like to do?");
+				System.out.println("View balance    (0)");
+				System.out.println("Withdraw        (1)");
+				System.out.println("Deposit         (2)");
+				System.out.println("Modify username (3)");
+				System.out.println("Modify pin      (4)");
 			}
 		}
 	}
