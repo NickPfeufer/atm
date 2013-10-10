@@ -39,6 +39,12 @@ class Atm {
 				System.out.println("Modify username (3)");
 				System.out.println("Modify pin      (4)");
 				job = reader.nextInt();
+				if (job == 0) {
+					System.out.println("Your account has $" + users[loggedInAs].balance());
+					
+				}else if () {
+					
+				}
 			}
 		}
 	}
