@@ -24,6 +24,7 @@ class Atm {
 			if (!loggedIn) {
 				System.out.println("please enter your username");
 				user = reader.next(java.lang.String);
+				System.out.println("please enter your pin number");
 				pin = reader.nextInt();
 				if (login(user, pin)) {
 					System.out.println("Welcome back " + users[loggedInAs].username());
@@ -65,8 +66,13 @@ class Atm {
 					}					
 				}else if (job == 3){
 					System.out.println("Enter your new user name");
-					user = reader.next(java.lang.String);
+					if (modifyUsername(reader.next(java.lang.String))){
+						System.out.println("Your username has been updated to " + users[loggedInAs].username());
+					}else {
+						System.out.println("The username you entered was invalid");
+					}
 				}else if (job == 4){
+					System.out.println("Enter your new pin number");
 					
 				}else if (job == 5){
 					
