@@ -62,7 +62,7 @@ class Atm {
 					if (modifyBalance(amount)) {
 						System.out.println("Your new balance is: " + users[loggedInAs].balance());
 					}else {
-						System.out.println("That is more than you have in your acount");
+						System.out.println("That amount is invalid");
 					}					
 				}else if (job == 3){
 					System.out.println("Enter your new user name");
