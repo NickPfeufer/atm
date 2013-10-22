@@ -29,6 +29,7 @@ public class Account {
 		} else {
 			this.balance += change; 
 		}
+		return true;
 			
 	}
 
@@ -38,6 +39,7 @@ public class Account {
 		} else {
 			this.pin = newPin;
 		}
+		return true;
 	}
 
 	public boolean modifyUsername(String newusername) {
@@ -46,5 +48,6 @@ public class Account {
 		} else {
 			this.username = newusername;
 		}
+		return true;
 	}
 }
