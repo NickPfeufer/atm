@@ -73,11 +73,19 @@ class Atm {
 					}
 				}else if (job == 4){
 					System.out.println("Enter your new pin number");
+					if(modifyPin(reader.nextDouble())){
+						System.out.println("Your pin number has been updated to " + users[loggedInAs].pin());
+					}else {
+						System.out.println("The number you entered was invalid");	
+					}
 					
 				}else if (job == 5){
-					
+					System.out.println("Goodbye");
+					loggedIn = false;
 				}else if (job == 6){
 					running = false;	
+				}else {
+					System.out.println("Task not found");	
 				}
 			}
 		}
