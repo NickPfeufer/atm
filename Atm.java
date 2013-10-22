@@ -18,7 +18,7 @@ class Atm {
 		String user;
 		int pin;
 		int job;
-		int amount;
+		double amount;
 		while (running) {
 			greeting();
 			if (!loggedIn) {
@@ -48,11 +48,24 @@ class Atm {
 				}else if (job == 1) {
 					System.out.println("Your account has $" + users[loggedInAs].balance());
 					System.out.println("Please enter the amount you would like to withdraw: ");
-					amount = reader.nextInt();
+					amount = reader.nextDouble();
+					if (modifyBalance(-amount)) {
+						System.out.println("Your new balance is: " + users[loggedInAs].balance());
+					}else {
+						System.out.println("That is more than you have in your acount");
+					}
 				}else if (job == 2){
-					
+					System.out.println("Your account has $" + users[loggedInAs].balance());
+					System.out.println("Please enter the amount you would like to Deposit: ");
+					amount = reader.nextDouble();
+					if (modifyBalance(amount)) {
+						System.out.println("Your new balance is: " + users[loggedInAs].balance());
+					}else {
+						System.out.println("That is more than you have in your acount");
+					}					
 				}else if (job == 3){
-					
+					System.out.println("Enter your new user name");
+					user = reader.next(java.lang.String);
 				}else if (job == 4){
 					
 				}else if (job == 5){
