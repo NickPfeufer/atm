@@ -3,7 +3,6 @@ public class Account {
 	private int pin;
 	private double balance; 
 
-	Scanner scanner = new Scanner(System.in);
 
 	public Account(String username, int pin, double balance) {
 		this.username = username;
@@ -34,7 +33,7 @@ public class Account {
 	}
 
 	public boolean modifyPin(int newPin) {
-		if (newPin < 1000 && newPin > 9999) {
+		if (newPin >= 1000 && newPin <= 9999) {
 			return false;
 		} else {
 			this.pin = newPin;
@@ -43,7 +42,7 @@ public class Account {
 	}
 
 	public boolean modifyUsername(String newusername) {
-		if (newusername.Length() <= 0;) {
+		if (newusername.length() <= 0) {
 			return false;
 		} else {
 			this.username = newusername;
