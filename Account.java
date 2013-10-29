@@ -33,7 +33,7 @@ public class Account {
 	}
 
 	public boolean modifyPin(int newPin) {
-		if (newPin >= 1000 && newPin <= 9999) {
+		if (newPin <= 1000 || newPin >= 9999) {
 			return false;
 		} else {
 			this.pin = newPin;

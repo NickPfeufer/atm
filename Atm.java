@@ -39,9 +39,15 @@ class Atm {
 					running = true;
 					fail = 0;
 				}else {
-					System.out.println("Invalid user name or pin number");
-					reader.next();
+					System.out.println("Invalid user name or pin number.");
 					fail++;
+					if (fail<2) {
+						System.out.println("Atempts remaining before shutdown " + (3-fail));
+						System.out.println("enter a to retry");
+						reader.next();						
+					}
+
+					
 				}
 			}else{
 				System.out.println("What would you like to do?");
